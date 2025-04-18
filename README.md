@@ -6,3 +6,7 @@
 ### GIT
 - [깃허브로 그룹 프로젝트 하는 법](./GIT/git_group_project.md)
 - [깃 브랜치 명령어](./GIT/git_branch_command.md)
+
+
+### Tip
+- [유용한 CLI 명령어](./tips/useful-cli.md)
