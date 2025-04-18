@@ -4,4 +4,4 @@
 ## 📌 분류별 정리
 
 ### GIT
-- [깃 공부](./GIT/git.md)
+- [깃허브로 그룹 프로젝트 하는 법](./GIT/git_group_project.md)
