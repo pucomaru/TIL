@@ -31,9 +31,11 @@
 
 | 명령어 | 설명 |
 |--------|------|
-| `git stash` | 현재 작업 내용을 임시 저장하고 워킹 디렉토리 깨끗하게 초기화 |
+| `git stash` | 수정된(tracked) 파일만 임시 저장 |
+| `git stash -u` | 수정된 파일 + 추적되지 않은(untracked) 새 파일까지 저장 |
+| `git stash -a` | 수정된 파일 + untracked + .gitignore된 파일까지 전부 저장 |
 | `git stash list` | 저장해둔 stash 목록 확인 |
-| `git stash apply` | 가장 최근 stash를 다시 적용 (stash는 그대로 남음) |
+| `git stash apply` | 가장 최근 stash를 다시 적용 (stash는 그대로 유지됨) |
 | `git stash pop` | 가장 최근 stash를 적용하고 목록에서 삭제 |
 | `git stash drop` | 특정 stash를 삭제 |
 | `git stash clear` | stash에 저장된 모든 항목 삭제 |
@@ -49,15 +51,27 @@
 
 ---
 
+### 📎 `git stash -u`를 왜 써야 해?
+
+- 기본 `git stash`는 **수정된 파일(tracked)**만 저장함
+- **새로 만든 파일(아직 git add 안 한 파일)**은 포함되지 않음
+- 이럴 때 `-u` 옵션(`--include-untracked`)을 쓰면 **추적되지 않은 파일도 함께 stash** 됨
+
+```bash
+git stash -u  # 수정 + 새 파일까지 모두 안전하게 임시 저장
+```
+
+> 💡 실무에서 새 파일도 같이 작업 중이라면 `-u` 옵션은 거의 필수!
+
+---
+
 ## ✅ 협업 중 develop 브랜치가 업데이트되었을 때
 
 ```bash
 git switch feature/dayea        # 내가 작업 중이던 브랜치로 이동
-git stash                       # 현재 작업 내용을 임시 저장
+git stash -u                    # 현재 작업 내용 + 새 파일까지 임시 저장
 git pull origin develop         # 최신 develop 내용 병합
 git stash pop                   # 작업 다시 복원
 ```
 
 > 💡 stash 안 하고 pull 하면 충돌날 수도 있고, Git이 거부할 수도 있음!
-
----
