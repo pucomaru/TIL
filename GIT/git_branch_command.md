@@ -1,5 +1,6 @@
 
-# 📌 Git 명령어 정리: branch, switch, stash
+
+# 📌 Git 명령어 정리: branch, switch, stash, commit vs stash
 
 ## 🌿 git branch
 브랜치 관련 작업을 할 때 사용하는 명령어
@@ -40,6 +41,8 @@
 | `git stash drop` | 특정 stash를 삭제 |
 | `git stash clear` | stash에 저장된 모든 항목 삭제 |
 
+---
+
 ### ❗️왜 `stash`를 써야 할까?
 
 - `git pull`, `git switch` 등을 하려면 **작업 중이던 파일이 깔끔해야 함**  
@@ -65,7 +68,7 @@ git stash -u  # 수정 + 새 파일까지 모두 안전하게 임시 저장
 
 ---
 
-## ✅ 협업 중 develop 브랜치가 업데이트되었을 때
+### ✅ 협업 중 develop 브랜치가 업데이트되었을 때
 
 ```bash
 git switch feature/dayea        # 내가 작업 중이던 브랜치로 이동
@@ -75,3 +78,23 @@ git stash pop                   # 작업 다시 복원
 ```
 
 > 💡 stash 안 하고 pull 하면 충돌날 수도 있고, Git이 거부할 수도 있음!
+
+---
+
+## 📊 commit vs stash
+
+| 구분 | `git commit` | `git stash` |
+|------|---------------|---------------|
+| 💡 목적 | 변경사항을 기록해서 **영구 저장소(Git 히스토리)**에 남김 | 변경사항을 **임시 저장**하고 워킹 디렉토리를 깨끗하게 |
+| 📦 저장 위치 | Git의 커밋 히스토리에 영구 저장 | 스택(stack) 형태의 stash 저장소에 임시 저장 |
+| 🧹 작업 폴더 상태 | 커밋 후에도 코드 남아있음 | stash 후엔 코드가 워킹 디렉토리에서 사라짐 (숨김) |
+| 🔁 복구 방법 | `git log`, `git checkout` 등 | `git stash apply` or `git stash pop` |
+| 🛠 사용 시점 | "이 정도는 저장해도 되겠다"는 시점 | "아직 미완성이지만 잠깐 다른 작업해야 할 때" |
+| 🌱 코드 완성도 느낌 | **상대에게 보여줄 수 있음** | **아직 나만 봐야 하는 임시 초안** |
+
+---
+
+### 🧠 기억 꿀팁
+
+> 🔵 **commit** = 다른 사람에게 공유할 수 있는 "저장용"  
+> 🟡 **stash** = 당장은 어지럽고 임시로 숨겨둘 "메모장"
