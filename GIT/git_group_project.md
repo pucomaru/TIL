@@ -47,7 +47,7 @@ git remote add origin <원격 저장소 URL>
 
 ```bash
 git branch feature/기능이름
-git push --set-upstream origin feature/기능이름
+git push origin feature/기능이름
 ```
 
 ---
@@ -118,7 +118,7 @@ git push origin feature/login
   (**반대로 develop에서 feature로 merge 금지**)
 
 ```bash
-git checkout feature/기능이름
+git switch feature/기능이름
 git pull origin develop  # 최신 develop 코드 가져오기
 # 충돌 해결 후
 git add .
