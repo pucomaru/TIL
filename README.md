@@ -5,6 +5,7 @@
 
 ### Javascript
 - [자바 스크립트 기본 문법 & DOM](./Javascript/grammer_and_DOM.md)
+- [Javascript Basic syntax]()
 
 ### GIT
 - [깃허브로 그룹 프로젝트 하는 법](./GIT/git_group_project.md)
