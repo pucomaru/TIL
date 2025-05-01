@@ -15,7 +15,7 @@
 - [Git merge](./GIT/git_merge.md)
 
 ### PyTorch
-- [객체 탐지](./PyTorch/Pytorch.md)
+- [객체 탐지](./PyTorch/deep_learning_object_detection.md)
 
 ### Tip
 - [유용한 CLI 명령어](./tips/useful-cli.md)
