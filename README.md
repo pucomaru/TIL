@@ -14,6 +14,8 @@
 - [깃 브랜치 명령어](./GIT/git_branch_command.md)
 - [Git merge](./GIT/git_merge.md)
 
+### PyTorch
+- [객체 탐지](./PyTorch/Pytorch.md)
 
 ### Tip
 - [유용한 CLI 명령어](./tips/useful-cli.md)
