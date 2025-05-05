@@ -9,6 +9,9 @@
 - [Controlling Event](./Javascript/controlling_Event.md)
 - [비동기](./Javascript/Asynchronous.md)
 
+### DB
+- [정규화](./DB/normalization.md)
+
 ### GIT
 - [깃허브로 그룹 프로젝트 하는 법](./GIT/git_group_project.md)
 - [깃 브랜치 명령어](./GIT/git_branch_command.md)
