@@ -5,9 +5,9 @@
 
 ### Vue.js
 - [Introduction of Vue](./Vue.js/introduction%20of%20vue.md)
-- [Basic_syntax](./Vue.js/introduction%20of%20vue.md)
+- [Basic_syntax](./Vue.js/vue_basic_syntax.md)
 - [Computed Properties](./Vue.js/computed_properties.md)
-- [Vue_Basic_Syntax](./Vue.js/vue_basic_syntax.md)
+- [single_file_components](./Vue.js/single-file-components.md)
 
 ### Javascript
 - [자바 스크립트 기본 문법 & DOM](./Javascript/grammer_and_DOM.md)
