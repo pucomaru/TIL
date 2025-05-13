@@ -8,6 +8,7 @@
 - [Basic_syntax](./Vue.js/vue_basic_syntax.md)
 - [Computed Properties](./Vue.js/computed_properties.md)
 - [single_file_components](./Vue.js/single-file-components.md)
+- [component_state_flow](./Vue.js/component_state_flow.md)
 
 ### Javascript
 - [자바 스크립트 기본 문법 & DOM](./Javascript/grammer_and_DOM.md)
