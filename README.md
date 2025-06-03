@@ -3,6 +3,10 @@
 
 ## 📌 분류별 정리
 
+### Java
+
+- [Java_basic1](./JAVA/java_basic1.md)
+
 ### Vue.js
 - [Introduction of Vue](./Vue.js/introduction%20of%20vue.md)
 - [Basic_syntax](./Vue.js/vue_basic_syntax.md)
