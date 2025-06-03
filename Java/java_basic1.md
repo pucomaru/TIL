@@ -129,3 +129,21 @@
 * `||`: OR
 * `!`: NOT (부정)
 
+## swith 문
+```java
+switch (조건식){
+  case value1;
+    // 조건식의 결과 값이 value1일 때 실행되는 코드 
+    break;
+  case value2;
+    break;
+  default:
+    // 조건식의 결과 값이 위의 어떤 값에도 해당하지 않을 때 실행되는 코드 
+}
+```
+
+## 삼항 연산자
+(조건) ? 참_표현식 : 거짓_표현식
+
+
+`switch 문 double ,float, long 지원안함. `

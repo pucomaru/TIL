@@ -4,8 +4,7 @@
 ## 📌 분류별 정리
 
 ### Java
-
-- [Java_basic1](./JAVA/java_basic1.md)
+- [Java_basic1](./Java/java_basic1.md)
 
 ### Vue.js
 - [Introduction of Vue](./Vue.js/introduction%20of%20vue.md)
