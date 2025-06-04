@@ -5,6 +5,7 @@
 
 ### Java
 - [Java_basic1](./Java/java_basic1.md)
+- [Java_basic2](./Java/java_basic2.md)
 
 ### Vue.js
 - [Introduction of Vue](./Vue.js/introduction%20of%20vue.md)
