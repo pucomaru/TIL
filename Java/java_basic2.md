@@ -338,3 +338,8 @@ int sum1 = add(5, 10);
 int add(int a, int b)
 double add(int a, int b)
 ```
+
+
+break: 반복문만 종료하고 메서드는 계속 진행
+
+return: 메서드 자체를 종료하고 호출한 쪽으로 돌아감
