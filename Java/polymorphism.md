@@ -144,3 +144,101 @@ public abstract void sound();
 * 다중 상속의 효과를 낼 수 있다.
 * 모든 메서드가 자동으로 추상 메서드이므로 `abstract` 키워드를 생략해도 된다.
 
+
+# 객체 지향 특징
+
+- 추상화
+- 캡슐화
+- 상속
+- 다형성
+
+```
+객체 지향 프로그래밍
+: 객체 지향 프로그래밍은 컴퓨터 프로그램을 명령어의 목록으로 보는 시각에서 벗어나 여러개의 독립된 단위, 즉 '객체'들의 모임으로 파악하고자 하는 것이다. 각각의 객체는 메시지를 주고받고, 데이터를 처리할 수 있다다.
+```
+
+# OCP (Open-Closed Principle, 개방-폐쇄 원칙)
+
+- **정의**
+  - 소프트웨어는 **확장에는 열려(Open)** 있고, **수정에는 닫혀(Closed)** 있어야 한다.
+  - 즉, 새로운 기능 추가는 허용하지만, 기존 코드는 수정하지 않아야 한다.
+
+- **이유**
+  - 프로그램이 커질수록 새로운 기능이 계속 추가된다.
+  - 기능 추가 때마다 기존 코드를 수정하면:
+    - 기존 코드에 의존하는 부분에서 버그가 발생할 가능성 ↑
+    - 유지보수 비용 ↑
+  - 기존 코드는 그대로 두고 새로운 코드만 추가해 기능을 확장할 수 있도록 하면 유지보수성이 높아진다.
+
+---
+
+# OCP 위반 예시
+
+```java
+class Animal {
+    String type;
+
+    public Animal(String type) {
+        this.type = type;
+    }
+
+    public void sound() {
+        if (type.equals("dog")) {
+            System.out.println("멍멍!");
+        } else if (type.equals("cat")) {
+            System.out.println("야옹!");
+        }
+    }
+}
+````
+
+* 문제점
+
+  * 새로운 동물이 추가될 때마다 `if`문을 수정해야 한다.
+  * 코드 수정 → 기존 코드가 변경됨 → OCP 위반!
+
+---
+
+# OCP 준수 예시
+
+```java
+interface Animal {
+    void sound();
+}
+
+class Dog implements Animal {
+    public void sound() {
+        System.out.println("멍멍!");
+    }
+}
+
+class Cat implements Animal {
+    public void sound() {
+        System.out.println("야옹!");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Animal dog = new Dog();
+        Animal cat = new Cat();
+        dog.sound();
+        cat.sound();
+    }
+}
+```
+
+* 장점
+
+  * 새로운 동물이 추가될 때 새로운 클래스만 만들면 된다.
+  * 기존 코드(`Main`, `Animal`)는 수정하지 않아도 된다.
+  * 즉, 확장은 열려있고(Open), 기존 코드는 수정하지 않아도 된다(Closed).
+
+---
+
+# OCP 핵심
+
+ - 기존 코드는 건드리지 않고 새 기능을 확장할 수 있게 만들자.
+-  다형성(추상 클래스, 인터페이스)을 적극 활용하자.
+ - 유지보수성과 안정성, 확장성을 높일 수 있다.
+
