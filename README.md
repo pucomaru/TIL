@@ -9,6 +9,7 @@
 - [Java_basic3](./Java/java_basic3.md)
 - [Java_basic4](./Java/java_basic4.md)
 - [다형성 polymorphism](./Java/polymorphism.md)
+- [자바 중급 1](./Java/java_intermediate1.md)
 
 ### Vue.js
 - [Introduction of Vue](./Vue.js/introduction%20of%20vue.md)
