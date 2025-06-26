@@ -209,3 +209,27 @@ Object
 * 그러나 **외부 자원(파일, DB, 소켓 등)** 은 **자동으로 해제되지 않음**
 * 따라서 사용 후 반드시 **명시적으로 해제(close)** 해야 함
 
+
+##  AutoCloseable 핵심 정리
+
+* `java.lang`에 포함된 **자바 기본 인터페이스**
+* `close()` 메서드만 가지고 있음
+* `try-with-resources`에서 자원을 자동으로 닫기 위해 사용
+* `Closeable`보다 **범용적** (모든 자원 + 모든 예외 가능)
+* 주요 구현 클래스: `BufferedReader`, `Scanner`, `Connection`, `Socket` 등
+
+```java
+class MyRes implements AutoCloseable {
+    public void close() {
+        System.out.println("닫힘");
+    }
+}
+```
+
+```java
+try (MyRes res = new MyRes()) {
+    System.out.println("사용 중");
+}
+// 사용 중
+// 닫힘
+```
