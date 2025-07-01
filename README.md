@@ -12,7 +12,7 @@
 - [자바 중급 1](./Java/java_intermediate1.md)
 - [자바 중급 2](./Java/java_intermediate2.md)
 
-# Spring
+### Spring
 - [스프링 입문](./Spring/Spring_introduction.md)
 
 ### Vue.js
