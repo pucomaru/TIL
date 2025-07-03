@@ -16,7 +16,7 @@
 - [스프링 입문](./Spring/Spring_introduction.md)
 
 ### Vue.js
-- [Introduction of Vue](./Vue.js/introduction%20of%20vue.md)
+- [Introduction_of_Vue](./Vue.js/introduction%20of%20vue.md)
 - [Basic_syntax](./Vue.js/vue_basic_syntax.md)
 - [Computed Properties](./Vue.js/computed_properties.md)
 - [single_file_components](./Vue.js/single-file-components.md)
